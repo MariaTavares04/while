@@ -13,11 +13,57 @@
     */
 
     //ENTRADA
-
+    let totalSalarios = 0;
+    let maior = ""
+    let menor = "";
+    let mulheres = 0;
+    let menorSalario = "";
+    let idadeMenorSala = 0;
+    let sexoMeSalario = '';
+    let quantPessoas = 0;
+    let idade, sexo, salario;
 
     //PROCESSAMENTO
+    while (true) {
+        idade = Number(prompt("Informe a idade"));
+        if (idade < 0) {
+            break;
+        }
 
+        sexo = prompt("Informe o sexo (M/F):").toUpperCase();
+        salario = Number(prompt("Informe o salário:"));
 
+        totalSalarios += salario
+        quantPessoas++;
+
+        if (idade > maior) {
+            maior = idade;
+        }
+        if (idade < menor) {
+            menor = idade
+        }
+        if (sexo == "F") {
+            mulheres++;
+        }
+        if (salario < menorSalario) {
+            menorSalario = salario;
+            idadeMenorSala = idade;
+            sexoMeSalario = sexo;
+        }
+
+    }
+
+    if (quantPessoas > 0) {
+        let media = (totalSalarios / quantPessoas);
+
+    alert(
+        `Resultado da pesquisa realizada:\n` +
+        `Média dos salários: R$ ${media.toFixed(2)} \n` +
+        `Maior idade: ${maior} anos. Menor idade: ${menor} anos. \n` +
+        `Quantidade de mulheres: ${mulheres} \n` +
+        `Idade e sexo da pessoa que possui o menor salário: ${idadeMenorSala} anos, ${sexoMeSalario} \n`
+    );
+    }
     //SAÍDA
-
+    
 </script>

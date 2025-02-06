@@ -6,14 +6,22 @@
     */
 
     //ENTRADA
-    let usuario = prompt("Informe seu nome: ");
-    let senha = prompt("Informe sua senha: ");
+    let usuario = "";
+    let senha = "";
 
     //PROCESSAMENTO
-    while (u) {
+    while (true) {
+        usuario = prompt("Informe o seu nome:");
+        senha = prompt("Informe sua senha:");
+
+       if (usuario == senha) {
+        alert(`Sua senha não pode ser igual ao seu usuário. Tente novamente.`);
+       } else {
         
+       }
     }
 
     //SAÍDA
+    alert(`Seu cadastro foi realizado.`);
 
 </script>

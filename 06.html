@@ -20,11 +20,63 @@
     */
 
     //ENTRADA
-
+    let votosJoaozinho = 0;
+    let votosMariazinha = 0;
+    let nulos = 0;
+    let brancos = 0;
+    let total = 0;
+    let votos = 0;
 
     //PROCESSAMENTO
+    do {
+        votos = Number(prompt("As opções de votos são \n" + 
+        "1. Candidato Joãozinho \n" + 
+        "2. Candidato Mariazinha \n" + 
+        "3. Nulo \n" + 
+        "4. Branco \n" + 
+        " Entre com o seu voto:"
+    ));
 
+        switch (votos) {
+            case 1:
+                votosJoaozinho++;
+                break;
+            case 2:
+                votosMariazinha++;
+                break;
+            case 3:
+                nulos++;
+            case 4:
+                brancos++;
+                break;
+            case 0:
+                break;
+            default:
+                alert(`Voto inválido. Tente novamente`);
+        }
+
+        if (votos !== 0) {
+            total++;
+        }
+
+    } while (votos !== 0);
+
+    let percentualNulos = (nulos / total) * 100;
+    let percentualBrancos = (brancos / total) * 100;
+    let vencedor = "";
+
+    if (votosJoaozinho > votosMariazinha) {
+        vencedor = "Joaozinho";
+    } else if (votosMariazinha > votosJoaozinho) {
+        vencedor = "Mariazinha";
+    }
 
     //SAÍDA
-
+    alert(`Votos do candidato Joaozinho: ${votosJoaozinho}\n` +
+        `Votos da candidata Mariazinha: ${votosMariazinha}\n` +
+        `Porcentagem de votos nulos: ${percentualNulos.toFixed(2)}%\n` +
+        `Porcentagem  de votos brancos: ${percentualBrancos
+        .toFixed(2)}%\n` + 
+        `O candidato vencedor: ${vencedor} `
+    );
 </script>

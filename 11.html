@@ -8,11 +8,16 @@
     */
 
     //ENTRADA
-
+    let numero = prompt("Informe um número para inverter: ");
+    let invertido = "";
 
     //PROCESSAMENTO
-
+    while (numero.length > 0) {
+        invertido += numero(numero.length - 1);
+        numero = numero.slice(0, numero.length - 1);
+    }
 
     //SAÍDA
+    alert(`Número invertido: ` + invertido);
 
 </script>

@@ -6,10 +6,18 @@
     */
 
     //ENTRADA
-
+    let senhaCorreta = 2401;
+    let senha = "";
 
     //PROCESSAMENTO
-
+    while (senha !== senhaCorreta) {
+        senha = prompt("Digite sua senha: ");
+        if (senha == senhaCorreta) {
+            alert(`Senha corrta.`);
+        } else {
+            alert(`Senha incorreta.`);
+        }
+    }
 
     //SAÍDA
 

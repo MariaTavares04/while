@@ -5,11 +5,16 @@
     */
     
     //ENTRADA
-
+    let numero;
+    let soma = 0;
 
     //PROCESSAMENTO
-
+    do {
+        numero = Number(prompt("Informe um número"));
+        soma += numero;
+    } while (numero != 0);
 
     //SAÍDA
+    alert(`A soma total: ` + soma);
     
 </script>

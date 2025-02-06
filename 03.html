@@ -11,15 +11,35 @@
     */
 
     //ENTRADA
-    let nome = prompt("Informe o seu nome");
-    let idade = prompt("Informe sua idade");
-    let salario = prompt("Informe seu salário");
-    let sexo = prompt("Informe seu genêro: Masculino (M), Feminino (F)");
-    
+    let nome = "";
+    let idade = "";
+    let salario = "";
+    let sexo = "";
+    let esCivil = "";
 
     //PROCESSAMENTO
+    do {
+        nome = prompt("Informe seu nome: ");
+    
+    } while (nome.length <= 3);
 
+    do {
+        idade = Number(prompt("Informe sua idade: "));
+    } while (idade < 0 || idade > 150);
+
+    do {
+        salario = Number(prompt("Informe seu salário: "));
+    }   while (salario <= 0);
+
+    do {
+        sexo = prompt("Informe seu sexo. Feminino(f), Masculino(m)").toLowerCase();
+    }   while (sexo !== "f" && sexo !== "m");
+
+    do {
+        esCivil = prompt("Informe seu estado civil. Solteiro(s), Casado(c), Viúvo(v), Divorciado(d)").toLowerCase();
+    }   while (esCivil !== "s" && esCivil !== "c" && esCivil !== "v" && esCivil !== "d");
 
     //SAÍDA
+    alert(`Seus dados foram validados.`);
 
 </script>

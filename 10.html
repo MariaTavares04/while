@@ -5,10 +5,23 @@
     */
 
     //ENTRADA
-
+    let quantidade = Number(prompt("Informe quantos números da sequência de Fibonacci deseja obter:"));
 
     //PROCESSAMENTO
+    let a = 0;
+    let b = 1;
+    let contador = 0;
 
+    if (quantidade > 0) {
+        alert(`Sequência de fibonacci com ${quantidade} de números`);
+    }
+    while (contador < quantidade) {
+        alert(a);
+        let temp = a;
+        a = b;
+        b = temp + b;
+        contador++;
+    }
 
     //SAÍDA
     
